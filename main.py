@@ -167,8 +167,7 @@ last_row = len(data)
 
 if last_row != 0:
     line_number = last_row+1
-
-if last_row == 0:
+elif last_row == 0:
     line_number += 1
 
 while True:
