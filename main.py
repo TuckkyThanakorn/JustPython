@@ -188,5 +188,5 @@ read_data.close()
 *.readlines อ่านค่าทั้งหมดในไฟล์ ออกมาเป็น list
 """
 """adding_feature
-edited from remote
+edited from GitHub
 """
