@@ -1,2 +1,2 @@
 # JustPython
-Learning Python
+Learning Python for finding a new job
