@@ -187,4 +187,4 @@ read_data.close()
 *.readline อ่านค่าบรรทัดแรกในไฟล์ ออกมาเป็น string
 *.readlines อ่านค่าทั้งหมดในไฟล์ ออกมาเป็น list
 """
-"""adding_feature"""
+"""adding_feature and more and more"""
