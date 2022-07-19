@@ -196,5 +196,34 @@ data = cursor.execute("select*from JustPython")
 for i in data:
     print(i)
 
-ข้อมูลจะถูกอ่านออกมาที่ละ row เป็นข้อมูลแบบ tuple
+ข้อมูลจะต้องถูกอ่านออกมาที่ละ row เป็นข้อมูลแบบ tuple จึงต้องใช้ for loop ในการอ่าน
+**********************************
+การใช้ select สำหรับอ่านเฉพาะ Field ที่ระบุ
+
+import sqlite3
+
+connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\JustPython.db")
+cursor = connection.cursor()
+data = cursor.execute("select first_name, saraly from JustPython")
+for i in data:
+    print(i)
+**********************************
+การใช้ select พร้อมเงื่อนไขที่ต้องการอ่านเรคอร์ด
+
+import sqlite3
+
+connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\JustPython.db")
+cursor = connection.cursor()
+data = cursor.execute("select*from JustPython where saraly >= 4000")
+for i in data:
+    print(i)
+***********************************
+การใช้ select พร้อมเงื่อนไขและการเรียงข้อมูล
+import sqlite3
+
+connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\JustPython.db")
+cursor = connection.cursor()
+data = cursor.execute("select*from JustPython where saraly <= 4000 order by saraly")
+for i in data:
+    print(i)
 """
