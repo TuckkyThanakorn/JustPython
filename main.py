@@ -186,5 +186,15 @@ read_data.close()
 *.read อ่านค่าทั้งหมดในไฟล์ ออกมาเป็น string
 *.readline อ่านค่าบรรทัดแรกในไฟล์ ออกมาเป็น string
 *.readlines อ่านค่าทั้งหมดในไฟล์ ออกมาเป็น list
+*******************************************************************************************
+การเชื่อมต่อกับไฟล์ database (*.db) และการอ่านทุก field ในตาราง
+import sqlite3
+
+connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\JustPython.db")
+cursor = connection.cursor()
+data = cursor.execute("select*from JustPython")
+for i in data:
+    print(i)
+
+ข้อมูลจะถูกอ่านออกมาที่ละ row เป็นข้อมูลแบบ tuple
 """
-"""adding_feature and more and more"""
