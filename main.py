@@ -199,6 +199,7 @@ data = cursor.execute("select*from JustPython")
 for i in data:
     print(i)
 
+connection.close()
 ข้อมูลจะต้องถูกอ่านออกมาที่ละ row เป็นข้อมูลแบบ tuple จึงต้องใช้ for loop ในการอ่าน
 **********************************
 การใช้ select สำหรับอ่านเฉพาะ Field ที่ระบุ
@@ -210,6 +211,8 @@ cursor = connection.cursor()
 data = cursor.execute("select first_name, saraly from JustPython")
 for i in data:
     print(i)
+
+connection.close()
 **********************************
 การใช้ select พร้อมเงื่อนไขที่ต้องการอ่านเรคอร์ด
 
@@ -220,6 +223,8 @@ cursor = connection.cursor()
 data = cursor.execute("select*from JustPython where saraly >= 4000")
 for i in data:
     print(i)
+
+connection.close()
 ***********************************
 การใช้ select พร้อมเงื่อนไขและการเรียงข้อมูล
 import sqlite3
@@ -229,4 +234,20 @@ cursor = connection.cursor()
 data = cursor.execute("select*from JustPython where saraly <= 4000 order by saraly")
 for i in data:
     print(i)
+
+connection.close()
+*************************************************************************************************************
+mysqlclient database การเรียกดูข้อมูลด้วยคำสั่ง select
+
+import MySQLdb
+
+connection = MySQLdb.connect(host="localhost",user ="root",passwd ="51035146",db="just_python")
+cursor = connection.cursor()
+
+cursor.execute("select id_number, first_name, surname, company, saraly from just_python")
+for i in cursor.fetchall():
+    print(i)
+
+connection.close()
+*************************************************************************************************************
 """
