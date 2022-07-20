@@ -194,9 +194,9 @@ read_data.close()
 การเชื่อมต่อกับไฟล์ database (*.db) และการอ่านทุก field ในตาราง
 import sqlite3
 
-connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\JustPython.db")
+connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\just_python.db")
 cursor = connection.cursor()
-data = cursor.execute("select*from JustPython")
+data = cursor.execute("select*from just_python")
 for i in data:
     print(i)
 
@@ -207,9 +207,9 @@ connection.close()
 
 import sqlite3
 
-connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\JustPython.db")
+connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\just_python.db")
 cursor = connection.cursor()
-data = cursor.execute("select first_name, saraly from JustPython")
+data = cursor.execute("select first_name, saraly from just_python")
 for i in data:
     print(i)
 
@@ -219,9 +219,9 @@ connection.close()
 
 import sqlite3
 
-connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\JustPython.db")
+connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\just_python.db")
 cursor = connection.cursor()
-data = cursor.execute("select*from JustPython where saraly >= 4000")
+data = cursor.execute("select*from just_python where saraly >= 4000")
 for i in data:
     print(i)
 
@@ -230,9 +230,9 @@ connection.close()
 การใช้ select พร้อมเงื่อนไขและการเรียงข้อมูล
 import sqlite3
 
-connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\JustPython.db")
+connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\just_python.db")
 cursor = connection.cursor()
-data = cursor.execute("select*from JustPython where saraly <= 4000 order by saraly")
+data = cursor.execute("select*from just_python where saraly <= 4000 order by saraly")
 for i in data:
     print(i)
 
@@ -252,3 +252,13 @@ for i in cursor.fetchall():
 connection.close()
 *************************************************************************************************************
 """
+import sqlite3
+
+connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\just_python.db")
+cursor = connection.cursor()
+cursor.execute("insert into just_python values(5,"Nat","Trivate","Vulcan","5000")")
+#data = cursor.execute("select*from just_python")
+#for i in data:
+    #print(i)
+
+connection.close()
