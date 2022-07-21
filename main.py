@@ -276,6 +276,32 @@ for i in data:
     #print(i)
 
 connection.close()
+************************************
+การใช้คาำสั่ง delete สำหรับลบเรคอร์ดทั้งหมดในตาราง
+
+import sqlite3
+
+connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\just_python.db")
+cursor = connection.cursor()
+delete_data = cursor.execute("delete from just_python")
+data = cursor.execute("select*from just_python")
+for i in data:
+    #print(i)
+
+connection.close()
+***********************************
+การใช้คาำสั่ง delete ร่วมกับคำสั่ง where สำหรับลบบางเรคอร์ดในตาราง
+
+import sqlite3
+
+connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\just_python.db")
+cursor = connection.cursor()
+delete_data = cursor.execute("delete from just_python where id_number = 1")
+data = cursor.execute("select*from just_python")
+for i in data:
+    #print(i)
+
+connection.close()
 *************************************************************************************************************
 mysqlclient database การเรียกดูข้อมูลด้วยคำสั่ง select
 
