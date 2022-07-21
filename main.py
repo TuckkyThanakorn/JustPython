@@ -303,7 +303,7 @@ for i in data:
 
 connection.close()
 *************************************************************************************************************
-mysqlclient database การเรียกดูข้อมูลด้วยคำสั่ง select
+mysqlclient database การเรียกดูข้อมูลทั้งหมดในตารางด้วยคำสั่ง select
 
 import MySQLdb
 
@@ -311,6 +311,84 @@ connection = MySQLdb.connect(host="localhost",user ="root",passwd ="51035146",db
 cursor = connection.cursor()
 
 cursor.execute("select*from just_python")
+for i in cursor.fetchall():
+    print(i)
+
+connection.close()
+*********************************
+mysqlclient database การเรียกดูข้อมูล 1 record ด้วยคำสั่ง select และ where
+
+import MySQLdb
+
+connection = MySQLdb.connect(host="localhost",user ="root",passwd ="51035146",db="just_python")
+cursor = connection.cursor()
+
+cursor.execute("select*from just_python where id_number = 1")
+for i in cursor.fetchall():
+    print(i)
+
+connection.close()
+*********************************
+mysqlclient database การเรียกดูข้อมูลแบบมีเงื่อนไขด้วยคำสั่ง select และ where
+
+import MySQLdb
+
+connection = MySQLdb.connect(host="localhost",user ="root",passwd ="51035146",db="just_python")
+cursor = connection.cursor()
+
+cursor.execute("select*from just_python where saraly > 3500")
+for i in cursor.fetchall():
+    print(i)
+
+connection.close()
+********************************
+mysqlclient database การเรียกดูข้อมูลแบบมีเงื่อนไขและเรียงลำดับด้วยคำสั่ง select และ where และ order by
+
+import MySQLdb
+
+connection = MySQLdb.connect(host="localhost",user ="root",passwd ="51035146",db="just_python")
+cursor = connection.cursor()
+
+cursor.execute("select*from just_python where saraly > 1000 order by saraly")
+for i in cursor.fetchall():
+    print(i)
+
+connection.close()
+*********************************
+mysqlclient database การเพิ่มเรคอร์ดข้อมูลใหม่ด้วยคำสั่ง insert
+
+import MySQLdb
+
+connection = MySQLdb.connect(host="localhost",user ="root",passwd ="51035146",db="just_python")
+cursor = connection.cursor()
+
+cursor.execute("insert into just_python(id_number,firstname,surname,company,saraly) values (5,"Nat","Trivate","Vulcan",5000)")
+for i in cursor.fetchall():
+    print(i)
+
+connection.close()
+**********************************
+การแก้ไขเรคอร์ดข้อมูลด้วยคำสั่ง update และ where
+
+import MySQLdb
+
+connection = MySQLdb.connect(host="localhost",user ="root",passwd ="51035146",db="just_python")
+cursor = connection.cursor()
+
+cursor.execute("update just_python set firstname = "Chatchalin", surname = "Chinnawat" where id_number =1")
+for i in cursor.fetchall():
+    print(i)
+
+connection.close()
+**********************************
+การลบเรคอร์ดข้อมูลด้วยคำสั่ง delete และ where
+
+import MySQLdb
+
+connection = MySQLdb.connect(host="localhost",user ="root",passwd ="51035146",db="just_python")
+cursor = connection.cursor()
+
+cursor.execute("delete from just_python where firstname = "Thanakorn"")
 for i in cursor.fetchall():
     print(i)
 
