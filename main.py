@@ -237,6 +237,45 @@ for i in data:
     print(i)
 
 connection.close()
+***********************************
+การใช้คำสั่ง insert สำหรับเพิ่มข้อมูลลงทุกฟิลด์ของตาราง
+
+import sqlite3
+
+connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\just_python.db")
+cursor = connection.cursor()
+insert_data = cursor.execute("insert into just_python values(5,"Nat","Trivate","Vulcan",5000)")
+data = cursor.execute("select*from just_python")
+for i in data:
+    #print(i)
+
+connection.close()
+************************************
+การใช้คำสั่ง insert สำหรับเพิ่มข้อมูลบางฟิลด์ของตาราง
+
+import sqlite3
+
+connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\just_python.db")
+cursor = connection.cursor()
+insert_data = cursor.execute("insert into just_python (id_number,first_name,last_name) values (6,"Tawee","Meesuk")")
+data = cursor.execute("select*from just_python")
+for i in data:
+    #print(i)
+
+connection.close()
+************************************
+การใช้คeสั่งupdate โดยใช้ร่วมกับคำสั่ง where เพื่อแก้ไขข้อมูลบางเรคอร์ด
+
+import sqlite3
+
+connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\just_python.db")
+cursor = connection.cursor()
+update_data = cursor.execute("update just_python set first_name = "Chatchalin" where id_number = 1")
+data = cursor.execute("select*from just_python")
+for i in data:
+    #print(i)
+
+connection.close()
 *************************************************************************************************************
 mysqlclient database การเรียกดูข้อมูลด้วยคำสั่ง select
 
@@ -252,13 +291,3 @@ for i in cursor.fetchall():
 connection.close()
 *************************************************************************************************************
 """
-import sqlite3
-
-connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\just_python.db")
-cursor = connection.cursor()
-cursor.execute("insert into just_python values(5,"Nat","Trivate","Vulcan","5000")")
-#data = cursor.execute("select*from just_python")
-#for i in data:
-    #print(i)
-
-connection.close()
