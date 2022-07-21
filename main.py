@@ -209,7 +209,7 @@ import sqlite3
 
 connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\just_python.db")
 cursor = connection.cursor()
-data = cursor.execute("select first_name, saraly from just_python")
+data = cursor.execute("select firstname, saraly from just_python")
 for i in data:
     print(i)
 
@@ -310,7 +310,7 @@ import MySQLdb
 connection = MySQLdb.connect(host="localhost",user ="root",passwd ="51035146",db="just_python")
 cursor = connection.cursor()
 
-cursor.execute("select id_number, first_name, surname, company, saraly from just_python")
+cursor.execute("select*from just_python")
 for i in cursor.fetchall():
     print(i)
 
