@@ -393,8 +393,92 @@ for i in cursor.fetchall():
     print(i)
 
 connection.close()
-*************************************************************************************************************
-Example 1 - The One-Shot Window
+***************************************************************************************
+tkinter for GUI
+การเรียกใช้ tkinter เพื่อสร้างหน้าต่างเปล่าๆ
+
+from tkinter import *
+
+root = Tk()
+root.title("JustPython")
+root.geometry("500x500+0+0")
+
+root.mainloop()
+*********************************************
+การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีข้อความ
+
+from tkinter import *
+
+root = Tk()
+root.title("JustPython")
+root.geometry("500x500+0+0")
+
+label_root = Label(text="Thanakorn").pack()
+
+root.mainloop()
+*********************************************
+การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีข้อความและปรับแต่ง properties
+ใช้ pack() คืออยู่ตำแหน่งบนสุดและตรงกลาง
+
+from tkinter import *
+
+root = Tk()
+root.title("JustPython")
+root.geometry("500x500+0+0")
+
+label_root = Label(text="Thanakorn",font=20,foreground="red",background="yellow").pack()
+
+root.mainloop()
+**********************************************
+การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีข้อความและปรับแต่ง properties และปรับตำแหน่งโดยใช้ *.place
+
+from tkinter import *
+
+root = Tk()
+root.title("JustPython")
+root.geometry("500x500+0+0")
+
+label1_root = Label(text="Thanakorn",font=20,fg="red",bg="yellow").place(x=50,y=50)
+label2_root = Label(text="Thanakorn",font=20,fg="black",bg="pink").place(x=100,y=100)
+
+root.mainloop()
+********************************************
+การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีข้อความและปรับแต่ง properties และปรับตำแหน่งโดยใช้ *.grid
+
+root = Tk()
+root.title("JustPython")
+root.geometry("500x500+0+0")
+
+label1_root = Label(text="Thanakorn",font=20,fg="red",bg="yellow").grid(row=0,column=0)
+label2_root = Label(text="Thanakorn",font=20,fg="black",bg="pink").grid(row=1,column=0)
+label3_root = Label(text="Thanakorn",font=20,fg="yellow",bg="brown").grid(row=1,column=1)
+
+root.mainloop()
+**********************************************
+การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีป้อความและปุ่มกด
+
+from tkinter import *
+
+root = Tk()
+root.title("JustPython")
+root.geometry("500x500+0+0")
+
+label_root = Label(text="Thanakorn",font=20,fg="red",bg="yellow").pack()
+Button = Button(text="OK",font=30,fg="white",bg="red").pack()
+
+root.mainloop()
+**********************************************
+"""
+
+
+from tkinter import *
+
+
+
+
+
+"""
+PySimpleGUI Example 1 - The One-Shot Window
 This type of program is called a "one-shot" window because the window is displayed one time,
 the values collected, and then it is closed. It doesn't remain open for a long time like you would in a Word Processor.
 
@@ -417,7 +501,7 @@ print('Hello', values[0], "! Thanks for trying PySimpleGUI")
 # Finish up by removing from the screen
 window.close()                                  # Part 5 - Close the Window
 *************************************
-Example 2 - Interactive Window
+PySimpleGUI Example 2 - Interactive Window
 In this example, our window will remain on the screen until the user closes the window or clicks the Quit button.
 The main difference between the one-shot window you saw earlier and an interactive window is the addition of an "Event Loop".
 The Event Loop reads events and inputs from your window. The heart of your application lives in the event loop.
