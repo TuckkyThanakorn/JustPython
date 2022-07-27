@@ -1,6 +1,6 @@
 """
 *******************************************************************************
-http://168training.com/training/document/python.pdf
+#http://168training.com/training/document/python.pdf
 *******************************************************************************
 X = str(5 + 3)
 print(X)
@@ -106,7 +106,7 @@ def test(a, b):
 
 print("Summary = "+test(5, 5))
 ******************************************************************************
-นำเข้า function จากภายนอก แล้วใส่ argument
+#นำเข้า function จากภายนอก แล้วใส่ argument
 
 import multiply
 
@@ -118,8 +118,8 @@ import multiply
 print(multiply.multiply_2number(10, 10))
 ********************************************************************************************
 #โปรแกรมจะทำการสร้างไฟล์ datatest.txt แล้วรับค่าการป้อนชื่อ
-สินค้าและราคาสินค้าในหน้าต่าง Python Shell ไปเรื่อยๆ จนกว่า จะพิมพ์ exit ในช่องป้อนชื่อสินค้าและป้อน
-ราคาสินค้าข้อมูลชื่อสินค้าและราคาสินค้าจะถูกจัดเก็บในไฟล์ datatest.txtโดยอัตโนมัติ
+#สินค้าและราคาสินค้าในหน้าต่าง Python Shell ไปเรื่อยๆ จนกว่า จะพิมพ์ exit ในช่องป้อนชื่อสินค้าและป้อน
+#ราคาสินค้าข้อมูลชื่อสินค้าและราคาสินค้าจะถูกจัดเก็บในไฟล์ datatest.txtโดยอัตโนมัติ
 
 line_number = 1
 title = ""
@@ -158,7 +158,8 @@ def read_txt_file():
 
 read_txt_file()
 *****************************************
-เขียนไฟล์ต่อจากด้านบน **ถ้าไม่มีข้อมูลเลย หรือไม่มีไฟล์เลย ก็จะเริ่มสร้างใหม่
+เ#ขียนไฟล์ต่อจากด้านบน **ถ้าไม่มีข้อมูลเลย หรือไม่มีไฟล์เลย ก็จะเริ่มสร้างใหม่
+
 line_number = 0
 title = ""
 amount = ""
@@ -186,12 +187,13 @@ while True:
     line_number = line_number+1
 read_data.close()
 
-*.read อ่านค่าทั้งหมดในไฟล์ ออกมาเป็น string
-*.readline อ่านค่าบรรทัดแรกในไฟล์ ออกมาเป็น string
-*.readlines อ่านค่าทั้งหมดในไฟล์ ออกมาเป็น list
+#*.read อ่านค่าทั้งหมดในไฟล์ ออกมาเป็น string
+#*.readline อ่านค่าบรรทัดแรกในไฟล์ ออกมาเป็น string
+#*.readlines อ่านค่าทั้งหมดในไฟล์ ออกมาเป็น list
 <<<<<<< HEAD
 *******************************************************************************************
-การเชื่อมต่อกับไฟล์ database (*.db) และการอ่านทุก field ในตาราง
+#การเชื่อมต่อกับไฟล์ database (*.db) และการอ่านทุก field ในตาราง
+
 import sqlite3
 
 connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\just_python.db")
@@ -203,7 +205,7 @@ for i in data:
 connection.close()
 ข้อมูลจะต้องถูกอ่านออกมาที่ละ row เป็นข้อมูลแบบ tuple จึงต้องใช้ for loop ในการอ่าน
 **********************************
-การใช้ select สำหรับอ่านเฉพาะ Field ที่ระบุ
+#การใช้ select สำหรับอ่านเฉพาะ Field ที่ระบุ
 
 import sqlite3
 
@@ -215,7 +217,7 @@ for i in data:
 
 connection.close()
 **********************************
-การใช้ select พร้อมเงื่อนไขที่ต้องการอ่านเรคอร์ด
+#การใช้ select พร้อมเงื่อนไขที่ต้องการอ่านเรคอร์ด
 
 import sqlite3
 
@@ -227,7 +229,7 @@ for i in data:
 
 connection.close()
 ***********************************
-การใช้ select พร้อมเงื่อนไขและการเรียงข้อมูล
+#การใช้ select พร้อมเงื่อนไขและการเรียงข้อมูล
 import sqlite3
 
 connection = sqlite3.connect("C:\\Users\\thana\\PycharmProjects\\JustPython\\just_python.db")
@@ -238,7 +240,7 @@ for i in data:
 
 connection.close()
 ***********************************
-การใช้คำสั่ง insert สำหรับเพิ่มข้อมูลลงทุกฟิลด์ของตาราง
+#การใช้คำสั่ง insert สำหรับเพิ่มข้อมูลลงทุกฟิลด์ของตาราง
 
 import sqlite3
 
@@ -251,7 +253,7 @@ for i in data:
 
 connection.close()
 ************************************
-การใช้คำสั่ง insert สำหรับเพิ่มข้อมูลบางฟิลด์ของตาราง
+#การใช้คำสั่ง insert สำหรับเพิ่มข้อมูลบางฟิลด์ของตาราง
 
 import sqlite3
 
@@ -264,7 +266,7 @@ for i in data:
 
 connection.close()
 ************************************
-การใช้คeสั่งupdate โดยใช้ร่วมกับคำสั่ง where เพื่อแก้ไขข้อมูลบางเรคอร์ด
+#การใช้คeสั่งupdate โดยใช้ร่วมกับคำสั่ง where เพื่อแก้ไขข้อมูลบางเรคอร์ด
 
 import sqlite3
 
@@ -277,7 +279,7 @@ for i in data:
 
 connection.close()
 ************************************
-การใช้คาำสั่ง delete สำหรับลบเรคอร์ดทั้งหมดในตาราง
+#การใช้คาำสั่ง delete สำหรับลบเรคอร์ดทั้งหมดในตาราง
 
 import sqlite3
 
@@ -290,7 +292,7 @@ for i in data:
 
 connection.close()
 ***********************************
-การใช้คาำสั่ง delete ร่วมกับคำสั่ง where สำหรับลบบางเรคอร์ดในตาราง
+#การใช้คาำสั่ง delete ร่วมกับคำสั่ง where สำหรับลบบางเรคอร์ดในตาราง
 
 import sqlite3
 
@@ -303,7 +305,7 @@ for i in data:
 
 connection.close()
 *************************************************************************************************************
-mysqlclient database การเรียกดูข้อมูลทั้งหมดในตารางด้วยคำสั่ง select
+#mysqlclient database การเรียกดูข้อมูลทั้งหมดในตารางด้วยคำสั่ง select
 
 import MySQLdb
 
@@ -316,7 +318,7 @@ for i in cursor.fetchall():
 
 connection.close()
 *********************************
-mysqlclient database การเรียกดูข้อมูล 1 record ด้วยคำสั่ง select และ where
+#mysqlclient database การเรียกดูข้อมูล 1 record ด้วยคำสั่ง select และ where
 
 import MySQLdb
 
@@ -329,7 +331,7 @@ for i in cursor.fetchall():
 
 connection.close()
 *********************************
-mysqlclient database การเรียกดูข้อมูลแบบมีเงื่อนไขด้วยคำสั่ง select และ where
+#mysqlclient database การเรียกดูข้อมูลแบบมีเงื่อนไขด้วยคำสั่ง select และ where
 
 import MySQLdb
 
@@ -342,7 +344,7 @@ for i in cursor.fetchall():
 
 connection.close()
 ********************************
-mysqlclient database การเรียกดูข้อมูลแบบมีเงื่อนไขและเรียงลำดับด้วยคำสั่ง select และ where และ order by
+#mysqlclient database การเรียกดูข้อมูลแบบมีเงื่อนไขและเรียงลำดับด้วยคำสั่ง select และ where และ order by
 
 import MySQLdb
 
@@ -355,7 +357,7 @@ for i in cursor.fetchall():
 
 connection.close()
 *********************************
-mysqlclient database การเพิ่มเรคอร์ดข้อมูลใหม่ด้วยคำสั่ง insert
+#mysqlclient database การเพิ่มเรคอร์ดข้อมูลใหม่ด้วยคำสั่ง insert
 
 import MySQLdb
 
@@ -368,7 +370,7 @@ for i in cursor.fetchall():
 
 connection.close()
 **********************************
-การแก้ไขเรคอร์ดข้อมูลด้วยคำสั่ง update และ where
+#การแก้ไขเรคอร์ดข้อมูลด้วยคำสั่ง update และ where
 
 import MySQLdb
 
@@ -394,8 +396,8 @@ for i in cursor.fetchall():
 
 connection.close()
 ***************************************************************************************
-tkinter for GUI
-การเรียกใช้ tkinter เพื่อสร้างหน้าต่างเปล่าๆ
+#tkinter for GUI
+#การเรียกใช้ tkinter เพื่อสร้างหน้าต่างเปล่าๆ
 
 from tkinter import *
 
@@ -405,7 +407,7 @@ root.geometry("500x500+0+0")
 
 root.mainloop()
 *********************************************
-การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีข้อความ
+#การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีข้อความ
 
 from tkinter import *
 
@@ -413,12 +415,11 @@ root = Tk()
 root.title("JustPython")
 root.geometry("500x500+0+0")
 
-label_root = Label(text="Thanakorn").pack()
+label_root = Label(text="Thanakorn").pack() #ใช้ pack() ให้โปรแกรมนำไปใช้และอยู่ตำแหน่งบนสุดและตรงกลาง
 
 root.mainloop()
 *********************************************
-การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีข้อความและปรับแต่ง properties
-ใช้ pack() คืออยู่ตำแหน่งบนสุดและตรงกลาง
+#การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีข้อความและปรับแต่ง properties
 
 from tkinter import *
 
@@ -430,7 +431,7 @@ label_root = Label(text="Thanakorn",font=20,foreground="red",background="yellow"
 
 root.mainloop()
 **********************************************
-การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีข้อความและปรับแต่ง properties และปรับตำแหน่งโดยใช้ *.place
+#การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีข้อความและปรับแต่ง properties และปรับตำแหน่งโดยใช้ *.place
 
 from tkinter import *
 
@@ -443,7 +444,7 @@ label2_root = Label(text="Thanakorn",font=20,fg="black",bg="pink").place(x=100,y
 
 root.mainloop()
 ********************************************
-การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีข้อความและปรับแต่ง properties และปรับตำแหน่งโดยใช้ *.grid
+#การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีข้อความและปรับแต่ง properties และปรับตำแหน่งโดยใช้ *.grid
 
 root = Tk()
 root.title("JustPython")
@@ -455,7 +456,7 @@ label3_root = Label(text="Thanakorn",font=20,fg="yellow",bg="brown").grid(row=1,
 
 root.mainloop()
 **********************************************
-การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีป้อความและปุ่มกด
+#การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีป้อความและปุ่มกด
 
 from tkinter import *
 
@@ -468,10 +469,229 @@ Button = Button(text="OK",font=30,fg="white",bg="red").pack()
 
 root.mainloop()
 **********************************************
-"""
-
+#การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีข้อความและปุ่มกดสั่งงานสร้างข้อความ
 
 from tkinter import *
+
+def message():
+    print("Hello world!!")
+    label_root = Label(text="Thanakorn", font=20, fg="red", bg="yellow").pack()
+
+from tkinter import *
+
+root = Tk()
+root.title("JustPython")
+root.geometry("500x500+0+0")
+
+label_root = Label(text="Thanakorn",font=20,fg="red",bg="yellow").pack()
+Button = Button(text="OK",font=30,fg="white",bg="red",command=message).pack()
+
+root.mainloop()
+*******************************************
+#การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีข้อความและปุ่มกดสั่งงานสร้างข้อความจากที่ข้อมูลที่กรอก
+
+def message():
+    name = txt.get()
+    print(name)
+    label_root = Label(text=name, font=20, fg="red", bg="yellow").pack()
+
+from tkinter import *
+
+root = Tk()
+root.title("JustPython")
+root.geometry("500x500+0+0")
+
+label_root = Label(text="Thanakorn",font=20,fg="red",bg="yellow").pack()
+txt = StringVar()
+InputText = Entry(root,textvariable=txt).pack()
+Button = Button(text="OK",font=30,fg="white",bg="red",command=message).pack()
+
+root.mainloop()
+*********************************************
+#การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีข้อความและปุ่มกดสั่งงานสร้างหน้าต่างใหม่
+
+def subwindow1():
+    sub1 = Tk()
+    sub1.title("SubWindow")
+    sub1.geometry("500x500+200+200")
+
+from tkinter import *
+
+root = Tk()
+root.title("JustPython")
+root.geometry("500x500+0+0")
+
+label_root = Label(text="Thanakorn",font=20,fg="red",bg="yellow").pack()
+Button = Button(text="OK",font=30,fg="white",bg="red",command=subwindow1).pack()
+
+root.mainloop()
+********************************************
+#การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีเมนูหลัก
+
+from tkinter import *
+
+root = Tk()
+root.title("JustPython")
+root.geometry("500x500+0+0")
+
+
+myMenu = Menu()
+root.config(menu=myMenu)
+myMenu.add_cascade(label="Menu1")
+myMenu.add_cascade(label="Menu2")
+
+
+root.mainloop()
+***************************************
+#การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีเมนูหลักและเมนูย่อย
+
+from tkinter import *
+
+root = Tk()
+root.title("JustPython")
+root.geometry("500x500+0+0")
+
+myMenuItem = Menu()
+myMenuItem.add_command(label="New file")
+myMenuItem.add_command(label="Open")
+myMenuItem.add_command(label="Save")
+myMenuItem.add_command(label="Exit")
+
+myMenu = Menu()
+root.config(menu=myMenu)
+myMenu.add_cascade(label="Menu1",menu=myMenuItem) #ต้องเอาเมนูย่อยไปไว้เหนือเมนูหลัง เพื่อให้เมนูหลักรู้จักตัวแปรของเมนูย่อย
+
+root.mainloop()
+**********************************
+#การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีเมนูหลักและเมนูย่อยที่สร้างหน้าต่างใหม่อีกตัว
+
+from tkinter import *
+
+def new_window():
+    window = Tk()
+    window.title("New window")
+    window.geometry("500x500+200+200")
+
+root = Tk()
+root.title("JustPython")
+root.geometry("500x500+0+0")
+
+myMenuItem = Menu()
+myMenuItem.add_command(label="New window",command=new_window)
+myMenuItem.add_command(label="Open")
+myMenuItem.add_command(label="Save")
+myMenuItem.add_command(label="Exit")
+
+myMenu = Menu()
+root.config(menu=myMenu)
+myMenu.add_cascade(label="Menu1",menu=myMenuItem) #ต้องเอาเมนูย่อยไปไว้เหนือเมนูหลัง เพื่อให้เมนูหลักรู้จักตัวแปรของเมนูย่อยก่อน
+
+root.mainloop()
+******************************************
+#การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีเมนูหลักและเมนูย่อยที่สร้างหน้าต่างใหม่อีกตัว และมีไดอะลอกหรือแจ้งเตือน เช่น About
+
+from tkinter import *
+import tkinter.messagebox ##########################
+
+
+def new_window():
+    window = Tk()
+    window.title("New window")
+    window.geometry("500x500+200+200")
+
+def myAbout():
+    tkinter.messagebox.showinfo("About","Thanakorn made this JustPython")
+
+root = Tk()
+root.title("JustPython")
+root.geometry("500x500+0+0")
+
+myMenuItem = Menu()
+myMenuItem.add_command(label="New window",command=new_window)
+myMenuItem.add_command(label="About",command=myAbout)
+myMenuItem.add_command(label="Open")
+myMenuItem.add_command(label="Save")
+myMenuItem.add_command(label="Exit")
+
+myMenu = Menu()
+root.config(menu=myMenu)
+myMenu.add_cascade(label="Menu1",menu=myMenuItem) #ต้องเอาเมนูย่อยไปไว้เหนือเมนูหลัง เพื่อให้เมนูหลักรู้จักตัวแปรของเมนูย่อยก่อน
+
+root.mainloop()
+#การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีเมนูหลักและเมนูย่อยที่สร้างหน้าต่างใหม่อีกตัว และมีไดอะลอกหรือแจ้งเตือน เช่น About
+#และปิดโปรแกรมโดยเคำสั่งในเมนูและมีการยืนยันก่อน
+
+from tkinter import *
+import tkinter.messagebox ##########################
+
+
+def new_window():
+    window = Tk()
+    window.title("New window")
+    window.geometry("500x500+200+200")
+
+def myAbout():
+    tkinter.messagebox.showinfo("About","Thanakorn made this JustPython")
+
+def exit():
+    exit_confirm = tkinter.messagebox.askquestion("Confirmation","Do you want to exit program")
+    if exit_confirm == "Yes":
+        root.destroy()
+
+root = Tk()
+root.title("JustPython")
+root.geometry("500x500+0+0")
+
+myMenuItem = Menu()
+myMenuItem.add_command(label="New window",command=new_window)
+myMenuItem.add_command(label="About",command=myAbout)
+myMenuItem.add_command(label="Open")
+myMenuItem.add_command(label="Save")
+myMenuItem.add_command(label="Exit",command=exit)
+
+myMenu = Menu()
+root.config(menu=myMenu)
+myMenu.add_cascade(label="Menu1",menu=myMenuItem) #ต้องเอาเมนูย่อยไปไว้เหนือเมนูหลัง เพื่อให้เมนูหลักรู้จักตัวแปรของเมนูย่อยก่อน
+
+root.mainloop()
+***************************************
+#การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีการเลือกสีให้ Label
+
+from tkinter import *
+from tkinter.colorchooser import * ################################
+
+root = Tk()
+root.title("JustPython")
+root.geometry("500x500+0+0")
+
+def selectColor():
+    color = askcolor()
+    print(color)
+    myLabel = Label(text="Thanakorn",fg=color[1]).pack()
+
+button = Button(text="Choose color",command=selectColor).pack()
+
+root.mainloop()
+*******************************
+#การเรียกใช้ tkinter เพื่อสร้างหน้าต่างเลือกไฟล์
+
+from tkinter import *
+from tkinter.colorchooser import * ################################
+from tkinter.filedialog import * #################################
+
+root = Tk()
+root.title("JustPython")
+root.geometry("500x500+0+0")
+
+def selectFile():
+    file = askopenfile()
+    myLabel = Label(text=file).pack()
+
+button = Button(text="Choose file",command=selectFile).pack()
+
+root.mainloop()
+"""
+
 
 
 
