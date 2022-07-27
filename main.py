@@ -710,8 +710,6 @@ root.mainloop()
 
 
 
-
-
 """
 PySimpleGUI Example 1 - The One-Shot Window
 This type of program is called a "one-shot" window because the window is displayed one time,
@@ -764,9 +762,3 @@ while True:
 # Finish up by removing from the screen
 window.close()
 """
-=======
-*.read อ่านค่าทั้งหมดในไฟล์ ออกมาเป็น string
-*.readline อ่านค่าบรรทัดแรกในไฟล์ ออกมาเป็น string
-*.readlines อ่านค่าทั้งหมดในไฟล์ ออกมาเป็น list
-"""
->>>>>>> 1859ca917a98036cebaa09503447cc29b175d364
