@@ -673,10 +673,9 @@ button = Button(text="Choose color",command=selectColor).pack()
 
 root.mainloop()
 *******************************
-#การเรียกใช้ tkinter เพื่อสร้างหน้าต่างเลือกไฟล์
+#การเรียกใช้ tkinter กดปุ่มเพื่อเรียกหน้าต่างเลือกไฟล์
 
 from tkinter import *
-from tkinter.colorchooser import * ################################
 from tkinter.filedialog import * #################################
 
 root = Tk()
@@ -684,14 +683,29 @@ root.title("JustPython")
 root.geometry("500x500+0+0")
 
 def selectFile():
-    file = askopenfile()
+    file = askopenfilename()
     myLabel = Label(text=file).pack()
 
-button = Button(text="Choose file",command=selectFile).pack()
+button = Button(text="Select file",command=selectFile).pack()
 
 root.mainloop()
 """
+#การเรียกใช้ tkinter กดปุ่มเพื่อเรียกหน้าต่างเลือกไฟล์
 
+from tkinter import *
+from tkinter.filedialog import * #################################
+
+root = Tk()
+root.title("JustPython")
+root.geometry("500x500+0+0")
+
+def selectFile():
+    file = askopenfilename()
+    myLabel = Label(text=file).pack()
+
+button = Button(text="Select file",command=selectFile).pack()
+
+root.mainloop()
 
 
 
