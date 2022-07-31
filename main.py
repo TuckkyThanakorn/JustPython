@@ -12,8 +12,8 @@ user_dict = {}
 for line in file_user_config:
     key, value = line.strip().split(",")
     user_dict[key.strip()] = value.strip()
-
 total_user = len(user_dict)
+file_user_config.close()
 
 def check_user():
     user_data = user_input.get()
