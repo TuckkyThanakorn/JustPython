@@ -61,7 +61,7 @@ label3_root = Label(text="Thanakorn",font=20,fg="yellow",bg="brown").grid(row=1,
 
 root.mainloop()
 **********************************************
-#การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีป้อความและปุ่มกด
+#การเรียกใช้ tkinter เพื่อสร้างหน้าต่างที่มีข้อความและปุ่มกด
 
 from tkinter import *
 
