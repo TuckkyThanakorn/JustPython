@@ -14,7 +14,7 @@ root_x_cordinate = int((screen_height/2) - (root_width/2))
 root_y_cordinate = int((screen_width/2) - (root_height/2))
 root.geometry("{}x{}+{}+{}".format(root_width, root_height, root_x_cordinate, root_y_cordinate)) #Place the window on center of the screen 1#
 
-#root.geometry("500x500")
+#root.geometry("500x500") #have to use this, if use "center" below
 #root.eval("tk::PlaceWindow . center") #Place the window on center of the screen 2#
 #root.state("zoomed") #Initialize a window as maximized#
 
@@ -50,8 +50,6 @@ def popup_widow1(message):
     alert_x_cordinate = int((screen_height / 2) - (alert_width / 2))
     alert_y_cordinate = int((screen_width / 2) - (alert_height / 2))
     alert.geometry("{}x{}+{}+{}".format(alert_width, alert_height, alert_x_cordinate, alert_y_cordinate))
-    #alert.geometry("200x100")
-    #alert.eval("tk::PlaceWindow . center")
     alert_message = Label(alert,text=message,font=100).pack()
 
 user_label = Label(text="User name : ",font=100).grid(row=0,column=0)
