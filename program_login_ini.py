@@ -53,15 +53,18 @@ def check_user():
 def alert_window(title,message,height,width):
     ok_button["state"] = DISABLED
     def alert_close():
-        alert.destroy()
+        alert.attributes("-topmost", False)
         root.attributes("-topmost", True)
+        alert.destroy()
         ok_button["state"] = ACTIVE
         root.protocol("WM_DELETE_WINDOW", root_close)
 
     alert = Tk()
     alert.title(title)
+    alert.attributes("-toolwindow", True)
     alert.attributes("-topmost", True)
-    alert.resizable(False,False)
+    root.attributes("-topmost", False)
+    alert.focus_force()
     alert_x_cordinate = int((screen_height / 2) - (width / 2))
     alert_y_cordinate = int((screen_width / 2) - (height / 2))
     alert.geometry("{}x{}+{}+{}".format(width, height, alert_x_cordinate, alert_y_cordinate))
@@ -70,7 +73,6 @@ def alert_window(title,message,height,width):
     alert_blank2 = Label(alert, text="", font=50).pack()
     alert_ok_button = Button(alert, text="OK", font=50, command=alert_close)
     alert_ok_button.pack()
-    alert_ok_button.focus_set()
     alert.protocol("WM_DELETE_WINDOW", alert_close)
     root.protocol("WM_DELETE_WINDOW", root_dis_close)
 
