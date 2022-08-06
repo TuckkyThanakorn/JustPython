@@ -1,4 +1,3 @@
-
 # โปรแกรม Log in ที่อ่านข้อมูลจาก *.ini มาเป็น dictionary
 
 from tkinter import *
@@ -51,12 +50,12 @@ def check_user():
             alert_window("Alert!!", "Invalid user name!!",170,220)
 
 def alert_window(title,message,height,width):
-    ok_button["state"] = DISABLED
+    root_ok_button["state"] = DISABLED
     def alert_close():
         alert.attributes("-topmost", False)
         root.attributes("-topmost", True)
         alert.destroy()
-        ok_button["state"] = ACTIVE
+        root_ok_button["state"] = ACTIVE
         root.protocol("WM_DELETE_WINDOW", root_close)
 
     alert = Tk()
@@ -85,8 +84,8 @@ pass_input = Entry(root, font=50)
 pass_input.grid(row=1, column=1)
 
 root_blank = Label(root, text="", font=50).grid(row=2, column=1)
-ok_button = Button(root,text="Log in", font=500,command=check_user)
-ok_button.grid(row=3, column=1)
+root_ok_button = Button(root, text="Log in", font=500, command=check_user)
+root_ok_button.grid(row=3, column=1)
 
 root.protocol("WM_DELETE_WINDOW", root_close)
 root.mainloop()
