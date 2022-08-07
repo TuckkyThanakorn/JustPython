@@ -6,6 +6,7 @@ from tkinter import messagebox
 
 root = Tk()
 root.title("Program Currency Convertor")
+# root.resizable(False, False)
 screen_height = root.winfo_screenwidth()
 screen_width = root.winfo_screenheight()
 root_height = 250
