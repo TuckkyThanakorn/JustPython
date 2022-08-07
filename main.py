@@ -1,6 +1,6 @@
 #โปรแกรม Log in ที่อ่านข้อมูลจาก *.ini มาเป็น dictionary
 
-from re import T
+from cmath import exp
 from tkinter import *
 from tkinter import ttk
 
@@ -19,43 +19,46 @@ root.geometry("{}x{}+{}+{}".format(root_width, root_height, root_x_cordinate, ro
 #root.state("zoomed") #Initialize a window as maximized#
       
 rate = "0.0"
+from_amount = StringVar()
+to_amount = StringVar()
 
 def convert():
-    A = convert_from_combobox.get()
-    B = convert_to_combobox.get()
-    if A == "Select currency" and B == "Select currency":
+    from_amount = from_input.get()
+    from_currency = from_combobox.get()
+    to_currency = to_combobox.get()
+    if (from_currency == "USD" and to_currency == "THB"):
+        from_amount_float = float(from_amount)
+        rate = str(from_amount_float * 33.5)
+        label_rate.configure(text=rate) # update new value for the label
+    elif (from_currency == "USD" and to_currency == "NZD"):
+        from_amount_float = float(from_amount)
+        rate = str(from_amount_float * 1.5)
+        label_rate.configure(text=rate) 
+    elif (from_currency == "USD" and to_currency == "USD"):
+        from_amount_float = float(from_amount)
+        rate = str(from_amount_float * 1)
+        label_rate.configure(text=rate) 
+    else:
         rate = "0.0"
-        label_rate.configure(text=rate) #update new value for the label
-    elif (A == "1 USD" and B == "THB"):
-        rate = "33.5 THB"
-        label_rate.configure(text=rate)
-    elif (A == "1 USD" and B == "NZD"):
-        rate = "1.4 NZD"
-        label_rate.configure(text=rate)
-    elif (A == "1 USD" and B == "USD"):
-        rate = "1 USD"
         label_rate.configure(text=rate)
 
-currency_from_input = Entry(font=50,justify="center",width=8)
-currency_from_input.insert(0, "Amount")
-#currency_from_input.pack()
-currency_from_combobox = StringVar(value="Select currency")
-convert_from_combobox = ttk.Combobox(textvariable=currency_from_combobox, font=50)
-#convert_from_combobox.pack()
-convert_from_combobox["value"] = ("1 USD", "1 NZD", "1 THB")
+from_input = Entry(textvariable=from_amount, font=50, justify="center", width= 8)
+from_input.insert(0, "Amount")
+from_input.pack(expand=YES)
+from_combobox = StringVar(value="Select currency")
+from_combobox = ttk.Combobox(textvariable=from_combobox, font=50)
+from_combobox.pack(expand=YES)
+from_combobox["value"] = ("USD", "NZD", "THB")
 
 label_to = Label(text="to", font=50).pack()
 
-currency_to_input = Entry(font=50,width=10)
-currency_to_input.insert(0, "Amount")
-#currency_to_input.pack()
-currency_to_combobox = StringVar(value="Select currency")
-convert_to_combobox = ttk.Combobox(textvariable=currency_to_combobox, font=50)
-#convert_to_combobox.pack()
-convert_to_combobox["value"] = ("THB", "NZD", "USD")
+to_combobox = StringVar(value="Select currency")
+to_combobox = ttk.Combobox(textvariable=to_combobox, font=50)
+to_combobox.pack(expand=YES)
+to_combobox["value"] = ("THB", "NZD", "USD")
 
-converse_button = Button(text="Convert", font=50, command=convert)
-#converse_button.pack(expand=YES)
+convert_button = Button(text="Convert", font=50, command=convert)
+convert_button.pack(expand=YES)
 
 label_rate = Label(text=rate, font=50)
 label_rate.pack(expand=YES)
