@@ -10,7 +10,7 @@ root.resizable(False, False)
 screen_height = root.winfo_screenwidth()
 screen_width = root.winfo_screenheight()
 root_height = 250
-root_width = 300
+root_width = 400
 root_x_cordinate = int((screen_height/2) - (root_width/2))
 root_y_cordinate = int((screen_width/2) - (root_height/2))
 root.geometry("{}x{}+{}+{}".format(root_width, root_height, root_x_cordinate, root_y_cordinate)) #Place the window on center of the screen 1#
@@ -49,7 +49,6 @@ def convert():
         rate = "Please select currency"
         label_rate.configure(text=rate)
     
-
 def from_usd():
     from_amount = from_input.get()
     to_currency = to_combobox.get()

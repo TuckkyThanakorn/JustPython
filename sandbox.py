@@ -1,18 +1,18 @@
 from tkinter import *
-from tkinter import ttk ###################################
 
 root = Tk()
-root.title("JustPython")
-root.geometry("500x500+0+0")
+frame = Frame(root, border="5", relief=GROOVE, padx=10, pady=10)
+frame.pack()
+redbutton = Button(frame, text="Red", fg="red")
+redbutton.pack(side = LEFT)
+brownbutton = Button(frame, text="Brown", fg="brown")
+brownbutton.pack(side = RIGHT)
+bluebutton = Button(frame, text="Blue", fg="blue")
+bluebutton.pack(side = BOTTOM)
 
-def selectTown():
-    Label(text=choice.get()+" selected").grid(row=2,column=0)
-
-Label(text="Address").grid(row=0,column=0)
-choice = StringVar(value="Select town")
-combo = ttk.Combobox(textvariable=choice)
-combo["value"] = ("Manurewa","East Tamaki","Mout Wellington")
-combo.grid(row=0,column=1)
-button = Button(text="Submit",command=selectTown).grid(row=1,column=1)
+bottomframe = Frame(root, bd="3", relief=GROOVE, padx=10, pady=10)
+bottomframe.pack(side = BOTTOM)
+blackbutton = Button(bottomframe, text="Black", fg="black")
+blackbutton.pack(side = BOTTOM)
 
 root.mainloop()
