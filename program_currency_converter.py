@@ -54,15 +54,15 @@ def from_usd():
     to_currency = to_combobox.get()
     if to_currency == "THB":
         from_amount_float = float(from_amount)
-        rate = str(from_amount_float * 33.5)
+        rate = str(from_amount_float * 33.5)+" USD"
         label_rate.configure(text=rate) # update new value for the label
     elif to_currency == "NZD":
         from_amount_float = float(from_amount)
-        rate = str(from_amount_float * 1.5)
+        rate = str(from_amount_float * 1.5)+" NZD"
         label_rate.configure(text=rate) 
     elif to_currency == "USD":
         from_amount_float = float(from_amount)
-        rate = str(from_amount_float * 1)
+        rate = str(from_amount_float * 1)+" USD"
         label_rate.configure(text=rate) 
     else:
         rate = "Please select currency"
@@ -73,15 +73,15 @@ def from_nzd():
     to_currency = to_combobox.get()
     if to_currency == "THB":
         from_amount_float = float(from_amount)
-        rate = str(from_amount_float * 22)
+        rate = str(from_amount_float * 22)+" THB"
         label_rate.configure(text=rate) # update new value for the label
     elif to_currency == "NZD":
         from_amount_float = float(from_amount)
-        rate = str(from_amount_float * 1)
+        rate = str(from_amount_float * 1)+" NZD"
         label_rate.configure(text=rate) 
     elif to_currency == "USD":
         from_amount_float = float(from_amount)
-        rate = str(from_amount_float / 1.5)
+        rate = str(from_amount_float / 1.5)+" USD"
         label_rate.configure(text=rate) 
     else:
         rate = "Please select currency"
@@ -92,15 +92,15 @@ def from_thb():
     to_currency = to_combobox.get()
     if to_currency == "THB":
         from_amount_float = float(from_amount)
-        rate = str(from_amount_float * 1)
+        rate = str(from_amount_float * 1)+" THB"
         label_rate.configure(text=rate) # update new value for the label
     elif to_currency == "NZD":
         from_amount_float = float(from_amount)
-        rate = str(from_amount_float / 22)
+        rate = str(from_amount_float / 22)+" NZD"
         label_rate.configure(text=rate) 
     elif to_currency == "USD":
         from_amount_float = float(from_amount)
-        rate = str(from_amount_float / 33.5)
+        rate = str(from_amount_float / 33.5)+" USD"
         label_rate.configure(text=rate) 
     else:
         rate = "Please select currency"
