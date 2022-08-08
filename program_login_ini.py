@@ -100,7 +100,7 @@ root.resizable(False, False)
 screen_height = root.winfo_screenwidth()
 screen_width = root.winfo_screenheight()
 root_height = 150
-root_width = 450
+root_width = 400
 root_x_cordinate = int((screen_height/2) - (root_width/2))
 root_y_cordinate = int((screen_width/2) - (root_height/2))
 root.geometry("{}x{}+{}+{}".format(root_width, root_height, root_x_cordinate, root_y_cordinate)) #Place the window on center of the screen 1#
@@ -148,7 +148,7 @@ user_input = Entry(root,font=50)
 user_input.grid(row=0,column=1)
 
 pass_label = Label(root,text="Password : ", font=50).grid(row=1, column=0)
-pass_input = Entry(root, font=50)
+pass_input = Entry(root, font=50, show="*")
 pass_input.grid(row=1, column=1)
 
 root_blank = Label(root, text="", font=50).grid(row=2, column=1)
