@@ -27,6 +27,11 @@ rate = "0.0"
 from_amount = StringVar()
 to_amount = StringVar()
 
+def only_numbers(char):
+    return char.isdigit()
+
+validation = root.register(only_numbers)
+"""
 def check_input():
     from_amount = from_input.get()
     try:
@@ -36,7 +41,7 @@ def check_input():
         label_rate.configure(text=rate)
     else:
         convert()
-
+"""
 def convert():
     from_currency = from_combobox.get()
     if from_currency == "USD":
@@ -107,7 +112,8 @@ def from_thb():
         label_rate.configure(text=rate)
 
 
-from_input = Entry(textvariable=from_amount, font=50, justify="center", width= 8)
+
+from_input = Entry(textvariable=from_amount, font=50, justify="center", width= 8, validate="key", validatecommand=(validation, '%S')) # add validation
 from_input.insert(0, "1")
 from_input.pack(expand=YES)
 from_combobox = StringVar(value="Select currency")
@@ -122,7 +128,7 @@ to_combobox = ttk.Combobox(textvariable=to_combobox, font=50)
 to_combobox.pack(expand=YES)
 to_combobox["value"] = ("THB", "NZD", "USD")
 
-convert_button = Button(text="Convert", font=50, command=check_input)
+convert_button = Button(text="Convert", font=50, command=convert) # used to be command=check_input
 convert_button.pack(expand=YES)
 
 label_rate = Label(text=rate, font=50)
