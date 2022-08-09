@@ -111,8 +111,6 @@ def from_thb():
         rate = "Please select currency"
         label_rate.configure(text=rate)
 
-
-
 from_input = Entry(textvariable=from_amount, font=50, justify="center", width= 8, validate="key", validatecommand=(validation, '%S')) # add validation
 from_input.insert(0, "1")
 from_input.pack(expand=YES)
